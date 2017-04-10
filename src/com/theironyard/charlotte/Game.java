@@ -9,16 +9,18 @@ public class Game {
     public static void main(String[] args) throws Exception {
         System.out.println("Welcome, traveller.");
 
-        player.chooseName();
-        player.chooseWeapon();
-        player.chooseLocation();
+        while (true) {
+            player.chooseName();
+            player.chooseWeapon();
+            player.chooseLocation();
 
-        player.findItem("shield");
-        player.findItem("boots");
-        player.findItem("belt");
+            player.findItem("shield");
+            player.findItem("boots");
+            player.findItem("belt");
 
-        Enemy ogre = new Enemy("Ogre", 10, 10);
-        player.battle(ogre);
+            Enemy ogre = new Enemy("Ogre", 100, 100);
+            player.battle(ogre);
+        }
     }
 
     public static String nextLine() {
